@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,33 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
             }
         });
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String username = edUsername.getText().toString();
+                String email = edEmail.getText().toString();
+                String password = edPassword.getText().toString();
+                String confirm = edConPassword.getText().toString();
+                if (username.isEmpty() || password.isEmpty() || email.isEmpty() || confirm.isEmpty()) {
+                    Toast.makeText(RegisterActivity.this, "Fill all the details", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (password.compareTo(confirm) == 0) {
+                        if (isValid(password)) {
+                            Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                        } else {
+                            Toast.makeText(RegisterActivity.this, "Password must contain at least 8 characters, including a letter, number, and symbol", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(RegisterActivity.this, "Password and Confirm password didn't match", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
     }
-
+    private boolean isValid(String password) {
+    // Minimum 8 characters, at least one letter, one number, and one special character
+    String passwordPattern = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$";
+    return password.matches(passwordPattern);
+}
 }
