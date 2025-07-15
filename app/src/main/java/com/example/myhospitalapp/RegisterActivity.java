@@ -42,12 +42,14 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = edEmail.getText().toString();
                 String password = edPassword.getText().toString();
                 String confirm = edConPassword.getText().toString();
+                Database db = new Database(getApplicationContext(),"healthcare",null, 1);
                 if (username.isEmpty() || password.isEmpty() || email.isEmpty() || confirm.isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Fill all the details", Toast.LENGTH_SHORT).show();
                 } else {
                     if (password.compareTo(confirm) == 0) {
                         if (isValid(password)) {
-                            Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                            db.register(username,email,password);
+                            Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                         } else {
                             Toast.makeText(RegisterActivity.this, "Password must contain at least 8 characters, including a letter, number, and symbol", Toast.LENGTH_SHORT).show();
