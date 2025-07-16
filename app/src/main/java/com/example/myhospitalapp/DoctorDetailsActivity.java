@@ -18,42 +18,45 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DoctorDetailsActivity extends AppCompatActivity {
-    private String[][] doctor_details1={
-            {"Doctor Name: Paul Otieno","Hospital Address: Nairobi","Exp: 5yrs","Mobile No:071414414","400"},
-            {"Doctor Name: Mary Otieno","Hospital Address: Mombasa","Exp: 3yrs","Mobile No:071111111","700"},
-            {"Doctor Name: John Otieno","Hospital Address: Kisumu","Exp: 6yrs","Mobile No:0732424242","100"},
-            {"Doctor Name: Peter Otieno","Hospital Address: Eldoret","Exp: 10yrs","Mobile No:0722442420","150"},
-            {"Doctor Name: Ian Otieno","Hospital Address: Kitale","Exp: 15yrs","Mobile No:0714142323","200"},
-    };
-    private String[][] doctor_details2={
-    {"Doctor Name: Paul Otieno","Hospital Address: Nairobi","Exp: 5yrs","Mobile No:071414414","400"},
-    {"Doctor Name: Mary Otieno","Hospital Address: Mombasa","Exp: 3yrs","Mobile No:071111111","700"},
-    {"Doctor Name: John Otieno","Hospital Address: Kisumu","Exp: 6yrs","Mobile No:0732424242","100"},
-    {"Doctor Name: Peter Otieno","Hospital Address: Eldoret","Exp: 10yrs","Mobile No:0722442420","150"},
-    {"Doctor Name: Ian Otieno","Hospital Address: Kitale","Exp: 15yrs","Mobile No:0714142323","200"},
-};
-    private String[][] doctor_details3={
-            {"Doctor Name: Paul Otieno","Hospital Address: Nairobi","Exp: 5yrs","Mobile No:071414414","400"},
-            {"Doctor Name: Mary Otieno","Hospital Address: Mombasa","Exp: 3yrs","Mobile No:071111111","700"},
-            {"Doctor Name: John Otieno","Hospital Address: Kisumu","Exp: 6yrs","Mobile No:0732424242","100"},
-            {"Doctor Name: Peter Otieno","Hospital Address: Eldoret","Exp: 10yrs","Mobile No:0722442420","150"},
-            {"Doctor Name: Ian Otieno","Hospital Address: Kitale","Exp: 15yrs","Mobile No:0714142323","200"},
-    };
-    private String[][] doctor_details4={
-            {"Doctor Name: Paul Otieno","Hospital Address: Nairobi","Exp: 5yrs","Mobile No:071414414","400"},
-            {"Doctor Name: Mary Otieno","Hospital Address: Mombasa","Exp: 3yrs","Mobile No:071111111","700"},
-            {"Doctor Name: John Otieno","Hospital Address: Kisumu","Exp: 6yrs","Mobile No:0732424242","100"},
-            {"Doctor Name: Peter Otieno","Hospital Address: Eldoret","Exp: 10yrs","Mobile No:0722442420","150"},
-            {"Doctor Name: Ian Otieno","Hospital Address: Kitale","Exp: 15yrs","Mobile No:0714142323","200"},
-    };
-    private String[][] doctor_details5={
-            {"Doctor Name: Paul Otieno","Hospital Address: Nairobi","Exp: 5yrs","Mobile No:071414414","400"},
-            {"Doctor Name: Mary Otieno","Hospital Address: Mombasa","Exp: 3yrs","Mobile No:071111111","700"},
-            {"Doctor Name: John Otieno","Hospital Address: Kisumu","Exp: 6yrs","Mobile No:0732424242","100"},
-            {"Doctor Name: Peter Otieno","Hospital Address: Eldoret","Exp: 10yrs","Mobile No:0722442420","150"},
-            {"Doctor Name: Ian Otieno","Hospital Address: Kitale","Exp: 15yrs","Mobile No:0714142323","200"},
+    private String[][] doctor_details1 = {
+            {"Doctor Name: Dr. Samuel Kiptoo", "Hospital Address: Nairobi", "Exp: 5yrs", "Mobile No:071414414", "400"},
+            {"Doctor Name: Dr. Esther Wanjiku", "Hospital Address: Mombasa", "Exp: 3yrs", "Mobile No:071111111", "700"},
+            {"Doctor Name: Dr. Michael Ochieng", "Hospital Address: Kisumu", "Exp: 6yrs", "Mobile No:0732424242", "100"},
+            {"Doctor Name: Dr. Grace Cheruiyot", "Hospital Address: Eldoret", "Exp: 10yrs", "Mobile No:0722442420", "150"},
+            {"Doctor Name: Dr. David Mwangi", "Hospital Address: Kitale", "Exp: 15yrs", "Mobile No:0714142323", "200"}
     };
 
+    private String[][] doctor_details2 = {
+            {"Doctor Name: Dr. Jane Njeri", "Hospital Address: Nairobi", "Exp: 5yrs", "Mobile No:071414414", "400"},
+            {"Doctor Name: Dr. Moses Kipchumba", "Hospital Address: Mombasa", "Exp: 3yrs", "Mobile No:071111111", "700"},
+            {"Doctor Name: Dr. Ruth Achieng", "Hospital Address: Kisumu", "Exp: 6yrs", "Mobile No:0732424242", "100"},
+            {"Doctor Name: Dr. Isaac Rotich", "Hospital Address: Eldoret", "Exp: 10yrs", "Mobile No:0722442420", "150"},
+            {"Doctor Name: Dr. Lydia Wambui", "Hospital Address: Kitale", "Exp: 15yrs", "Mobile No:0714142323", "200"}
+    };
+
+    private String[][] doctor_details3 = {
+            {"Doctor Name: Dr. Amos Ndegwa", "Hospital Address: Nairobi", "Exp: 5yrs", "Mobile No:071414414", "400"},
+            {"Doctor Name: Dr. Beatrice Muthoni", "Hospital Address: Mombasa", "Exp: 3yrs", "Mobile No:071111111", "700"},
+            {"Doctor Name: Dr. Joseph Odhiambo", "Hospital Address: Kisumu", "Exp: 6yrs", "Mobile No:0732424242", "100"},
+            {"Doctor Name: Dr. Mercy Chebet", "Hospital Address: Eldoret", "Exp: 10yrs", "Mobile No:0722442420", "150"},
+            {"Doctor Name: Dr. Stephen Kamau", "Hospital Address: Kitale", "Exp: 15yrs", "Mobile No:0714142323", "200"}
+    };
+
+    private String[][] doctor_details4 = {
+            {"Doctor Name: Dr. Elizabeth Atieno", "Hospital Address: Nairobi", "Exp: 5yrs", "Mobile No:071414414", "400"},
+            {"Doctor Name: Dr. Simon Mburu", "Hospital Address: Mombasa", "Exp: 3yrs", "Mobile No:071111111", "700"},
+            {"Doctor Name: Dr. Agnes Nyaboke", "Hospital Address: Kisumu", "Exp: 6yrs", "Mobile No:0732424242", "100"},
+            {"Doctor Name: Dr. Victor Kiprono", "Hospital Address: Eldoret", "Exp: 10yrs", "Mobile No:0722442420", "150"},
+            {"Doctor Name: Dr. Naomi Wekesa", "Hospital Address: Kitale", "Exp: 15yrs", "Mobile No:0714142323", "200"}
+    };
+
+    private String[][] doctor_details5 = {
+            {"Doctor Name: Dr. Patrick Njoroge", "Hospital Address: Nairobi", "Exp: 5yrs", "Mobile No:071414414", "400"},
+            {"Doctor Name: Dr. Catherine Mwende", "Hospital Address: Mombasa", "Exp: 3yrs", "Mobile No:071111111", "700"},
+            {"Doctor Name: Dr. Daniel Omondi", "Hospital Address: Kisumu", "Exp: 6yrs", "Mobile No:0732424242", "100"},
+            {"Doctor Name: Dr. Sarah Chepkoech", "Hospital Address: Eldoret", "Exp: 10yrs", "Mobile No:0722442420", "150"},
+            {"Doctor Name: Dr. Thomas Mutua", "Hospital Address: Kitale", "Exp: 15yrs", "Mobile No:0714142323", "200"}
+    };
     TextView tv;
  Button btn;
  String[][ ] doctor_details={};
