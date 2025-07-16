@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/black"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:padding="8dp"
-    android:layout_height="match_parent">
- <TextView
-     android:id="@+id/line_a"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:text="Text View"
-     android:textColor="#ffffff"
-     android:textSize="16sp"
-     android:textStyle="italic"/>
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/line_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="4dp" />
+
     <TextView
         android:id="@+id/line_b"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Text View"
-        android:textColor="#FFf777"
-        android:textSize="16sp"
-        android:textStyle="italic"/>
+        android:textColor="#FFC107"
+        android:textSize="14sp"
+        android:paddingBottom="4dp" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1">
@@ -32,27 +33,26 @@
             android:id="@+id/line_c"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.20"
-            android:text="TextView"
-            android:textColor="#ffff66"
-            android:textSize="12sp" />
+            android:layout_weight="0.33"
+            android:textColor="#FFC107"
+            android:textSize="12sp"
+            android:paddingEnd="4dp" />
 
         <TextView
             android:id="@+id/line_d"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.20"
-            android:text="TextView"
-            android:textColor="#ffff66"
-            android:textSize="12sp" />
+            android:layout_weight="0.33"
+            android:textColor="#FFC107"
+            android:textSize="12sp"
+            android:paddingEnd="4dp" />
 
         <TextView
             android:id="@+id/line_e"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.20"
-            android:text="TextView"
-            android:textColor="#ffff66"
+            android:layout_weight="0.34"
+            android:textColor="#FFC107"
             android:textSize="12sp" />
     </LinearLayout>
 </LinearLayout>
